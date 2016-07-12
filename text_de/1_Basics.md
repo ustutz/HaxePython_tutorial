@@ -59,7 +59,7 @@ In diesem Beispiel wird die Variable eight in einen String umgewandelt und die V
     }
     
     
-Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeofvariable.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_of_variable/bin/Typeofvariable.py) 
+Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeofvariable.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_conversion/bin/2Typeconversion.py) 
 
     import math as python_lib_Math
     import math as Math
