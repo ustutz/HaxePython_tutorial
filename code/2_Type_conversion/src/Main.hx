@@ -10,5 +10,4 @@ class Main {
 		var str_eight = Std.string( eight );
 		var int_ten = Std.parseInt( ten );
 	}
-	
 }

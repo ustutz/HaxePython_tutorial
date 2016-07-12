@@ -59,7 +59,7 @@ In diesem Beispiel wird die Variable eight in einen String umgewandelt und die V
     }
     
     
-Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeofvariable.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_conversion/bin/2Typeconversion.py) 
+Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeconversion.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_conversion/bin/Typeconversion.py) 
 
     import math as python_lib_Math
     import math as Math
@@ -85,12 +85,6 @@ Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Aus
     		else:
     			return (((HxOverrides.stringOrNull(self.tag) + "(") + HxOverrides.stringOrNull(",".join([python_Boot.toString1(x1,'') for x1 in self.params]))) + ")")
     
-    Enum._hx_class = Enum
-    
-    
-    class EnumValue:
-    	_hx_class_name = "EnumValue"
-    EnumValue._hx_class = EnumValue
     
     
     class Main:
@@ -99,25 +93,30 @@ Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Aus
     
     	@staticmethod
     	def main():
-    		a = 5
-    		typeOfA = Type.typeof(a)
-    Main._hx_class = Main
-
-    class ValueType(Enum):
-    	_hx_class_name = "ValueType"
-        ...
+    		ten = "10"
+    		eight = 8
+    		str_eight = Std.string(eight)
+    		int_ten = Std.parseInt(ten)
+    
+    
+    class Std:
+    	_hx_class_name = "Std"
+    	_hx_statics = ["string", "parseInt", "shortenPossibleNumber", "parseFloat"]
+            ...
 
 Was ist passiert?  
 
-Die Funktion `Type.typeOf` ist in Python nicht enthalten. Der Haxe Compiler hat die komplette Funktionalität aber in den Python Sourcecode mit eingefügt. Auch die Main Klasse ist zu finden. In dem Code-Ausschnitt kurz vor Ende.
+Die Funktionen `Std.string` und `Std.int` sind in Python nicht enthalten. Der Haxe Compiler hat die komplette Funktionalität aber in den Python Sourcecode mit eingefügt. Auch die Main Klasse ist zu finden. In dem Code-Ausschnitt kurz vor Ende.
 
 Leider wird der Python Code durch die ganzen Zusätze nicht mehr sehr einfach zu lesen. Das ist auch der Grund wieso es oft nicht sehr sinnvoll ist, mit dem Python Sourcecode weiterzuarbeiten.
 
-Wer sich etwas in Python auskennt weiss vielleicht, dass es da auch eine Python Funktion gibt um den Typ einer Variable auszulesen. Es wär doch bestimmt manchmal sinnvoll, einfach diese Funktion zu benutzen.
+Wer sich etwas in Python auskennt weiss vielleicht, dass es da auch eine Python Funktion gibt um Variablen in einen anderen Typ zu konvertieren. Wie kann man nun direkt diese Funktion benutzen?
+
+[Weiter zu untyped]()
 
         
 ##Übersicht
 
 * [Intro]()
 * Basics
-* [Untyped]()
+* [untyped]()
