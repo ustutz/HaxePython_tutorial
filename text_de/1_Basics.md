@@ -42,7 +42,7 @@ Interessanter wird es wenn es entweder eine Funktionalität von Haxe in Python n
 
 ###2. Typ einer Variable umwandeln
 
-In diesem Beispiel wird die Variable eight in einen String umgewandelt und die Variable ten wird zum Typ Integer umgewandelt.
+In diesem Beispiel wird die Variable `eight` in einen String umgewandelt und die Variable `ten` wird zum Typ Integer konvertiert.
 
     package;
     
@@ -106,11 +106,11 @@ Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Aus
 
 Was ist passiert?  
 
-Die Funktionen `Std.string` und `Std.int` sind in Python nicht enthalten. Der Haxe Compiler hat die komplette Funktionalität aber in den Python Sourcecode mit eingefügt. Auch die Main Klasse ist zu finden. In dem Code-Ausschnitt kurz vor Ende.
+Die Funktionen `Std.string` und `Std.int` sind in Python nicht vorhanden. Der Haxe Compiler hat die komplette Funktionalität aber in den Python Sourcecode mit eingefügt. Auch die Main Klasse ist noch zu finden. In dem Code-Ausschnitt kurz vor Ende.
 
 Leider wird der Python Code durch die ganzen Zusätze nicht mehr sehr einfach zu lesen. Das ist auch der Grund wieso es oft nicht sehr sinnvoll ist, mit dem Python Sourcecode weiterzuarbeiten.
 
-Wer sich etwas in Python auskennt weiss vielleicht, dass es da auch eine Python Funktion gibt um Variablen in einen anderen Typ zu konvertieren. Wie kann man nun direkt diese Funktion benutzen?
+Wer sich etwas in Python auskennt weiss vielleicht, dass es auch eine Python Funktion gibt um Variablen in einen anderen Typ zu konvertieren. Wie kann man nun direkt diese Funktion benutzen?
 
 [Weiter zu untyped]()
 
@@ -118,5 +118,6 @@ Wer sich etwas in Python auskennt weiss vielleicht, dass es da auch eine Python 
 ##Übersicht
 
 * [Intro]()
-* Basics
+* **Basics**
 * [untyped]()
+* [python.Syntax.pythonCode]()

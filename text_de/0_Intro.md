@@ -20,7 +20,7 @@ Das Python Compile Target ist jedoch noch relativ neu und in Python gibt es eini
 * [Haxe Toolkit](http://haxe.org/) ab Version 3.3  
 * [HaxeDevelop](http://haxedevelop.org/) für Windows
   oder irgendeine andere [Haxe Entwicklungsumgebung](http://haxe.org/documentation/introduction/editors-and-ides.html) für Linux oder Mac .
-* [Python 3.+](https://www.continuum.io/downloads) Ich benutze das Python Paket von [Anaconda](https://www.continuum.io/why-anaconda) weil da die wichtigen Libraries mit installiert werden. Wichtig ist es, das Python 3.5 Paket oder ein neueres zu installieren, da aus Haxe kein Python 2.7 Code erstellt werden kann.
+* [Python 3.x](https://www.continuum.io/downloads) z.B. das Python Paket von [Anaconda](https://www.continuum.io/why-anaconda) weil da die wichtigen Libraries mit installiert werden. Wichtig ist es, das Python 3.5 Paket oder ein neueres zu installieren, da aus Haxe kein Python 2.x Code erstellt werden kann.
 
 ## Ressourcen
 
@@ -40,7 +40,7 @@ Die ganzen Texte und der Sourcecode dieser Tutorials sind auch auf Github verfü
 * [Sourcecode](https://github.com/ustutz/HaxePython_tutorial/tree/master/code) - der Beispiele
 
 ##Übersicht
-* Intro
+* **Intro**
 * [Basics]()
 * [untyped]()
-
+* [python.Syntax.pythonCode]()

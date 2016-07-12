@@ -6,7 +6,7 @@ Das letzte Beispiel hat gezeigt wie eine Funktion, die in Python so nicht vorhan
 
 In Python gibt es auch Funktionen um Variablen umzuwandeln. Um eine Variable zum Typ String zu konvertieren gibt es die Funktion `str()`, um eine Variable zum Typ Integer zu konvertieren gibt es die Funktion `int()`. Was ist also zu tun, um die nativen Funktionen direkt zu verwenden?
 
-Eine Idee könnte also sein, einfach die Python Funktionen in den Haxe Code zu schreiben. Ungefähr so:
+Eine Idee könnte sein, einfach die Python Funktionen in den Haxe Code zu schreiben. Ungefähr so:
 
     package;
     
@@ -22,14 +22,14 @@ Eine Idee könnte also sein, einfach die Python Funktionen in den Haxe Code zu s
     	}
     }
 
-Wer das ausprobiert bekommt vom Haxe Compiler zwei Fehler gemeldet:
+Wer das ausprobiert bekommt aber vom Haxe Compiler zwei Fehler gemeldet:
 
     src/Main.hx:10: characters 18-21 : Unknown identifier : str  
     src/Main.hx:11: characters 16-19 : Unknown identifier : int
     
 Die Funktionen `str()` und `int()` sind dem Compiler nicht bekannt.
 
-Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Compiler ruhigzustellen gibt es das Keyword `untyped`, das wir vor die Funktion schreiben:
+Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Compiler ruhigzustellen gibt es das Keyword `untyped`, das wir vor den Funktionsaufruf schreiben:
 
     package;
     
@@ -45,7 +45,7 @@ Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Comp
     	}
     }
 
-Der Compile-Vorgang wird ohne Beanstandung durchgeführt und der generierte Python Code sieht so aus:
+Der Compile-Vorgang wird ohne Beanstandung durchgeführt. Der generierte Python Code sieht so aus:
 
     class Main:
     
@@ -58,7 +58,14 @@ Der Compile-Vorgang wird ohne Beanstandung durchgeführt und der generierte Pyth
     
     Main.main()
     
-Bei Benutzung des `untyped` Keywords ist zu beachten, dass der Compiler den nachfolgenden Teil nicht auf Fehler überprüft. Ob Variablen deklariert sind oder ob die Typen der Variablen oder der Funktion korrekt ist.
+Bei Benutzung des `untyped` Keywords ist zu beachten, dass der Compiler den nachfolgenden Teil nicht auf Fehler überprüft.
+
+Es wird nicht überprüft  
+
+* ob Funktionen oder Variablen deklariert sind
+* ob die Typen der Funktion oder der Variablen korrekt sind
+
+
 
 
    
@@ -66,4 +73,5 @@ Bei Benutzung des `untyped` Keywords ist zu beachten, dass der Compiler den nach
 
 * [Intro]()
 * [Basics]()
-* untyped
+* **untyped**
+* [python.Syntax.pythonCode]()
