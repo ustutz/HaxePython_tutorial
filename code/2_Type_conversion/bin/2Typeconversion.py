@@ -22,12 +22,6 @@ class Enum:
 		else:
 			return (((HxOverrides.stringOrNull(self.tag) + "(") + HxOverrides.stringOrNull(",".join([python_Boot.toString1(x1,'') for x1 in self.params]))) + ")")
 
-Enum._hx_class = Enum
-
-
-class EnumValue:
-	_hx_class_name = "EnumValue"
-EnumValue._hx_class = EnumValue
 
 
 class Main:
@@ -36,59 +30,90 @@ class Main:
 
 	@staticmethod
 	def main():
-		a = 5
-		typeOfA = Type.typeof(a)
-Main._hx_class = Main
-
-class ValueType(Enum):
-	_hx_class_name = "ValueType"
-
-	@staticmethod
-	def TClass(c):
-		return ValueType("TClass", 6, [c])
-
-	@staticmethod
-	def TEnum(e):
-		return ValueType("TEnum", 7, [e])
-ValueType.TNull = ValueType("TNull", 0, list())
-ValueType.TInt = ValueType("TInt", 1, list())
-ValueType.TFloat = ValueType("TFloat", 2, list())
-ValueType.TBool = ValueType("TBool", 3, list())
-ValueType.TObject = ValueType("TObject", 4, list())
-ValueType.TFunction = ValueType("TFunction", 5, list())
-ValueType.TUnknown = ValueType("TUnknown", 8, list())
-ValueType._hx_class = ValueType
+		ten = "10"
+		eight = 8
+		str_eight = Std.string(eight)
+		int_ten = Std.parseInt(ten)
 
 
-class Type:
-	_hx_class_name = "Type"
-	_hx_statics = ["typeof"]
+class Std:
+	_hx_class_name = "Std"
+	_hx_statics = ["string", "parseInt", "shortenPossibleNumber", "parseFloat"]
 
 	@staticmethod
-	def typeof(v):
-		if (v is None):
-			return ValueType.TNull
-		elif isinstance(v,bool):
-			return ValueType.TBool
-		elif isinstance(v,int):
-			return ValueType.TInt
-		elif isinstance(v,float):
-			return ValueType.TFloat
-		elif isinstance(v,str):
-			return ValueType.TClass(str)
-		elif isinstance(v,list):
-			return ValueType.TClass(list)
-		elif (isinstance(v,_hx_AnonObject) or python_lib_Inspect.isclass(v)):
-			return ValueType.TObject
-		elif isinstance(v,Enum):
-			return ValueType.TEnum(v.__class__)
-		elif (isinstance(v,type) or hasattr(v,"_hx_class")):
-			return ValueType.TClass(v.__class__)
-		elif callable(v):
-			return ValueType.TFunction
-		else:
-			return ValueType.TUnknown
-Type._hx_class = Type
+	def string(s):
+		return python_Boot.toString1(s,"")
+
+	@staticmethod
+	def parseInt(x):
+		if (x is None):
+			return None
+		try:
+			return int(x)
+		except Exception as _hx_e:
+			_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
+			e = _hx_e1
+			try:
+				prefix = None
+				_this = HxString.substr(x,0,2)
+				prefix = _this.lower()
+				if (prefix == "0x"):
+					return int(x,16)
+				raise _HxException("fail")
+			except Exception as _hx_e:
+				_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
+				e1 = _hx_e1
+				r = None
+				x1 = Std.parseFloat(x)
+				try:
+					r = int(x1)
+				except Exception as _hx_e:
+					_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
+					e2 = _hx_e1
+					r = None
+				if (r is None):
+					r1 = Std.shortenPossibleNumber(x)
+					if (r1 != x):
+						return Std.parseInt(r1)
+					else:
+						return None
+				return r
+
+	@staticmethod
+	def shortenPossibleNumber(x):
+		r = ""
+		_g1 = 0
+		_g = len(x)
+		while (_g1 < _g):
+			i = _g1
+			_g1 = (_g1 + 1)
+			c = None
+			if ((i < 0) or ((i >= len(x)))):
+				c = ""
+			else:
+				c = x[i]
+			_g2 = HxString.charCodeAt(c,0)
+			if (_g2 is not None):
+				if (((((((((((_g2 == 46) or ((_g2 == 57))) or ((_g2 == 56))) or ((_g2 == 55))) or ((_g2 == 54))) or ((_g2 == 53))) or ((_g2 == 52))) or ((_g2 == 51))) or ((_g2 == 50))) or ((_g2 == 49))) or ((_g2 == 48))):
+					r = (("null" if r is None else r) + ("null" if c is None else c))
+				else:
+					break
+			else:
+				break
+		return r
+
+	@staticmethod
+	def parseFloat(x):
+		try:
+			return float(x)
+		except Exception as _hx_e:
+			_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
+			e = _hx_e1
+			if (x is not None):
+				r1 = Std.shortenPossibleNumber(x)
+				if (r1 != x):
+					return Std.parseFloat(r1)
+			return Math.NaN
 
 
 class python_Boot:
@@ -124,7 +149,7 @@ class python_Boot:
 				else:
 					return str(o)
 			except Exception as _hx_e:
-				_hx_e1 = _hx_e
+				_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
 				e = _hx_e1
 				return str(o)
 		if isinstance(o,list):
@@ -146,7 +171,7 @@ class python_Boot:
 			if hasattr(o,"toString"):
 				return o.toString()
 		except Exception as _hx_e:
-			_hx_e1 = _hx_e
+			_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
 			pass
 		if (python_lib_Inspect.isfunction(o) or python_lib_Inspect.ismethod(o)):
 			return "<function>"
@@ -166,7 +191,7 @@ class python_Boot:
 					fieldsStr = _g1
 					toStr = (("{ " + HxOverrides.stringOrNull(", ".join([x1 for x1 in fieldsStr]))) + " }")
 				except Exception as _hx_e:
-					_hx_e1 = _hx_e
+					_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
 					e2 = _hx_e1
 					return "{ ... }"
 				if (toStr is None):
@@ -227,7 +252,7 @@ class python_Boot:
 				if hasattr(o,"__repr__"):
 					return o.__repr__()
 			except Exception as _hx_e:
-				_hx_e1 = _hx_e
+				_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
 				pass
 			if hasattr(o,"__str__"):
 				return o.__str__([])
@@ -308,7 +333,7 @@ class python_Boot:
 				return c._hx_super
 			return None
 		except Exception as _hx_e:
-			_hx_e1 = _hx_e
+			_hx_e1 = _hx_e.val if isinstance(_hx_e, _HxException) else _hx_e
 			pass
 		return None
 
@@ -327,12 +352,10 @@ class python_Boot:
 			if real in python_Boot.keywords:
 				return real
 		return name
-python_Boot._hx_class = python_Boot
 
 
 class _hx_AnonObject:
 	_hx_class_name = "_hx_AnonObject"
-_hx_AnonObject._hx_class = _hx_AnonObject
 
 
 class python_internal_ArrayImpl:
@@ -345,7 +368,22 @@ class python_internal_ArrayImpl:
 			return x[idx]
 		else:
 			return None
-python_internal_ArrayImpl._hx_class = python_internal_ArrayImpl
+
+
+class _HxException(Exception):
+	_hx_class_name = "_HxException"
+	_hx_fields = ["val"]
+	_hx_methods = []
+	_hx_statics = []
+	_hx_super = Exception
+
+
+	def __init__(self,val):
+		self.val = None
+		message = str(val)
+		super().__init__(message)
+		self.val = val
+
 
 
 class HxOverrides:
@@ -364,12 +402,18 @@ class HxOverrides:
 			return "null"
 		else:
 			return s
-HxOverrides._hx_class = HxOverrides
 
 
 class HxString:
 	_hx_class_name = "HxString"
-	_hx_statics = ["substr"]
+	_hx_statics = ["charCodeAt", "substr"]
+
+	@staticmethod
+	def charCodeAt(s,index):
+		if ((((s is None) or ((len(s) == 0))) or ((index < 0))) or ((index >= len(s)))):
+			return None
+		else:
+			return ord(s[index])
 
 	@staticmethod
 	def substr(s,startIndex,_hx_len = None):
@@ -379,7 +423,6 @@ class HxString:
 			if (_hx_len == 0):
 				return ""
 			return s[startIndex:(startIndex + _hx_len)]
-HxString._hx_class = HxString
 
 Math.NEGATIVE_INFINITY = float("-inf")
 Math.POSITIVE_INFINITY = float("inf")

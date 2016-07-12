@@ -39,7 +39,7 @@ Die ganzen Texte und der Sourcecode dieser Tutorials sind auch auf Github verfü
 * [Repository](https://github.com/ustutz/HaxePython_tutorial) - zum Clonen, für Issues oder Pull Requests
 * [Sourcecode](https://github.com/ustutz/HaxePython_tutorial/tree/master/code) - der Beispiele
 
-##Tutorial Teile
+##Übersicht
 * Intro
-* [Haxe Basics]()
+* [Basics]()
 

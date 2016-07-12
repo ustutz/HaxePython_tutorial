@@ -40,22 +40,24 @@ Bisher also nichts überraschendes. Der Sourcecode wurde Zeile für Zeile in Pyt
 
 Interessanter wird es wenn es entweder eine Funktionalität von Haxe in Python nicht vorhanden ist, oder wenn eine Funktionalität von Python in Haxe nicht vorkommt.
 
-###2. Typ einer Variable auslesen
+###2. Typ einer Variable umwandeln
 
-In diesem Beispiel wird der Typ der variable a ausgelesen.
+In diesem Beispiel wird die Variable eight in einen String umgewandelt und die Variable ten wird zum Typ Integer umgewandelt.
 
     package;
     
-    import python.Lib;
-    
     class Main {
-    	
+    
     	static function main() {
     		
-    		var a = 5;
-    		var typeOfA = Type.typeof( a );
+    		var ten = "10";
+    		var eight = 8;
+    		
+    		var str_eight = Std.string( eight );
+    		var int_ten = Std.parseInt( ten );
     	}
     }
+    
     
 Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeofvariable.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_of_variable/bin/Typeofvariable.py) 
 
@@ -107,12 +109,15 @@ Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Aus
 
 Was ist passiert?  
 
-Die Funktion `Type.typeOf( a );` ist in Python nicht enthalten. Der Haxe Compiler hat die nötige Funktionalität aber in den Python Sourcecode mit eingefügt. Leider wird der Python Code dadurch nicht mehr sehr einfach zu lesen. Das ist auch der Grund wieso es nicht sehr sinnvoll ist, mit dem Python Sourcecode weiterzuarbeiten. Besser ist es, alle Änderungen immer im Haxe Sourcecode vorzunehmen.
+Die Funktion `Type.typeOf` ist in Python nicht enthalten. Der Haxe Compiler hat die komplette Funktionalität aber in den Python Sourcecode mit eingefügt. Auch die Main Klasse ist zu finden. In dem Code-Ausschnitt kurz vor Ende.
 
+Leider wird der Python Code durch die ganzen Zusätze nicht mehr sehr einfach zu lesen. Das ist auch der Grund wieso es oft nicht sehr sinnvoll ist, mit dem Python Sourcecode weiterzuarbeiten.
 
+Wer sich etwas in Python auskennt weiss vielleicht, dass es da auch eine Python Funktion gibt um den Typ einer Variable auszulesen. Es wär doch bestimmt manchmal sinnvoll, einfach diese Funktion zu benutzen.
 
         
-##Links
+##Übersicht
 
 * [Intro]()
 * Basics
+* [Untyped]()

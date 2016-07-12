@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\Typeofvariable.py" />
+    <movie path="bin\2Typeconversion.py" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
