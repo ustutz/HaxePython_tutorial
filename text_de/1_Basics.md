@@ -21,7 +21,6 @@ Hier der Haxe Sourcecode:
     		var d = true;
     		var greeting = "Hello";
     	}
-    	
     }
                 
 Und hier der daraus erzeugte Python Sourcecode:    
@@ -35,11 +34,11 @@ Und hier der daraus erzeugte Python Sourcecode:
     		d = True
     		greeting = "Hello"
     
-    
-    
     Main.main()
     
-Bisher also nichts überraschendes. Der Sourcecode wurde Zeile für Zeile in Python übersetzt. Interessanter wird es wenn es entweder eine Funktionalität von Haxe in Python nicht vorhanden ist, oder wenn eine Funktionalität von Python in Haxe nicht vorkommt.
+Bisher also nichts überraschendes. Der Sourcecode wurde Zeile für Zeile in Python übersetzt.
+
+Interessanter wird es wenn es entweder eine Funktionalität von Haxe in Python nicht vorhanden ist, oder wenn eine Funktionalität von Python in Haxe nicht vorkommt.
 
 ###2. Typ einer Variable auslesen
 
@@ -54,14 +53,65 @@ In diesem Beispiel wird der Typ der variable a ausgelesen.
     	static function main() {
     		
     		var a = 5;
-    		
     		var typeOfA = Type.typeof( a );
     	}
-    	
     }
     
+Der Python Sourcecode wird plötzlich sehr viel länger. Hier nur ein kurzer Ausschnitt. Der vollständige Code ist mit diesem Link zu sehen: [Typeofvariable.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/2_Type_of_variable/bin/Typeofvariable.py) 
+
+    import math as python_lib_Math
+    import math as Math
+    import inspect as python_lib_Inspect
     
     
+    class Enum:
+    	_hx_class_name = "Enum"
+    	_hx_fields = ["tag", "index", "params"]
+    	_hx_methods = ["__str__"]
+    
+    	def __init__(self,tag,index,params):
+    		self.tag = None
+    		self.index = None
+    		self.params = None
+    		self.tag = tag
+    		self.index = index
+    		self.params = params
+    
+    	def __str__(self):
+    		if (self.params is None):
+    			return self.tag
+    		else:
+    			return (((HxOverrides.stringOrNull(self.tag) + "(") + HxOverrides.stringOrNull(",".join([python_Boot.toString1(x1,'') for x1 in self.params]))) + ")")
+    
+    Enum._hx_class = Enum
+    
+    
+    class EnumValue:
+    	_hx_class_name = "EnumValue"
+    EnumValue._hx_class = EnumValue
+    
+    
+    class Main:
+    	_hx_class_name = "Main"
+    	_hx_statics = ["main"]
+    
+    	@staticmethod
+    	def main():
+    		a = 5
+    		typeOfA = Type.typeof(a)
+    Main._hx_class = Main
+
+    class ValueType(Enum):
+    	_hx_class_name = "ValueType"
+        ...
+
+Was ist passiert?  
+
+Die Funktion `Type.typeOf( a );` ist in Python nicht enthalten. Der Haxe Compiler hat die nötige Funktionalität aber in den Python Sourcecode mit eingefügt. Leider wird der Python Code dadurch nicht mehr sehr einfach zu lesen. Das ist auch der Grund wieso es nicht sehr sinnvoll ist, mit dem Python Sourcecode weiterzuarbeiten. Besser ist es, alle Änderungen immer im Haxe Sourcecode vorzunehmen.
+
+
+
+        
 ##Links
 
 * [Intro]()
