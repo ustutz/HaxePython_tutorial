@@ -1,6 +1,6 @@
 #Haxe-Python Tutorial - untyped
 
-**[Previous part: Basics]()**
+**[Previous part: Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)**
 
 Das letzte Beispiel hat gezeigt wie eine Funktion, die in Python so nicht vorhanden ist, in den generierten Python Code mit eingebaut wird.
 

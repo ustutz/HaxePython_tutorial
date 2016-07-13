@@ -118,7 +118,8 @@ Those who know more about Python probably know there are functions in Python to 
 
 **Next part: untyped (coming soon)**
         
-<h2>Overview</h2>
+<h3>Overview</h3>
+
 * [Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
 * **Basics**
 * untyped (coming soon)
