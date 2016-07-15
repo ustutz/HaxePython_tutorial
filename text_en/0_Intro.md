@@ -48,5 +48,5 @@ The texts and sourcecode of these tutorials are also available on Github for err
 
 * **Intro**
 * [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
-* untyped (coming soon)
+* [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
 * Syntax.pythonCode (coming soon)

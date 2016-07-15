@@ -116,11 +116,11 @@ Unfortunately this Python code becomes much more confusing and harder to read. B
 
 Those who know more about Python probably know there are functions in Python to convert variable types, too. How can we just use those?
 
-**Next part: untyped (coming soon)**
+**[Next part: untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)**
         
 <h3>Overview</h3>
 
 * [Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
 * **Basics**
-* untyped (coming soon)
+* [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
 * Syntax.pythonCode (coming soon)

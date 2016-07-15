@@ -79,7 +79,7 @@ The compiler still checks if the code after `untyped` is valid Haxe code. Someth
 
     var is_value_empty = untyped data[:,4] == "";
 
-For something like that there is another keyword:
+For something like this there is another method.
 
 **Next part: Syntax.pythonCode() (coming soon)**
 
