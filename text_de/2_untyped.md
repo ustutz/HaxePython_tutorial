@@ -1,6 +1,6 @@
 #Haxe-Python Tutorial - untyped
 
-
+<h3>Überprüfung des Compilers für Variablen oder Funktionen deaktivieren</h3>
 
 [Zurück zu Basics]()
 

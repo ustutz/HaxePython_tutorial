@@ -1,18 +1,18 @@
 #Haxe-Python Tutorial - untyped
 
-
+<h3>Telling the compiler: "Shut up. I know what I'm doing."</h3>
 
 ![haxe to python](https://i.imgsafe.org/63afc9b8fb.png)
 
 **[Previous part: Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)**
 
-Das letzte Beispiel hat gezeigt wie eine Funktion, die in Python so nicht vorhanden ist, in den generierten Python Code mit eingebaut wird.
+The last examples showed, how a function, that is not available as such, will be added to the generated Python sourcecode. 
 
-In Python gibt es auch Funktionen um Variablen umzuwandeln. Um eine Variable zum Typ String zu konvertieren gibt es die Funktion `str()`, um eine Variable zum Typ Integer zu konvertieren gibt es die Funktion `int()`. Was ist also zu tun, um die nativen Funktionen direkt zu verwenden?
+In Python there are functions to convert variable types, too. To convert a variable to the String type there is the function `str()`. To convert a variable to an Integer there is the function `int()`. How can we use these native function directly?
 
-<h3>3. Konvertieren von Variablentypen mit den Python Funktionen</h3>
+<h3>3. Converting variable types with Python functions</h3>
 
-Eine Idee könnte sein, einfach die Python Funktionen in den Haxe Code zu schreiben. Ungefähr so:
+One idea could be to just write the Python function into the Haxe sourcecode like so:
 
     package;
     
@@ -28,14 +28,14 @@ Eine Idee könnte sein, einfach die Python Funktionen in den Haxe Code zu schrei
     	}
     }
 
-Wer das ausprobiert bekommt vom Haxe Compiler zwei Fehler gemeldet:
+If you try this the Haxe compiler gives you two error messages:
 
     src/Main.hx:10: characters 18-21 : Unknown identifier : str  
     src/Main.hx:11: characters 16-19 : Unknown identifier : int
     
-Die Funktionen `str()` und `int()` sind dem Compiler nicht bekannt.
+That's because the functions `str()` and `int()` are not known to the compiler.
 
-Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Compiler ruhigzustellen gibt es das Keyword `untyped`, das wir vor den Funktionsaufruf schreiben:
+Well, but we know, these two functions will be valid in Python. For a case like this there is the keyword `untyped`, which we include before the function call:
 
     package;
     
@@ -51,7 +51,7 @@ Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Comp
     	}
     }
 
-Der Compile-Vorgang wird ohne Beanstandung durchgeführt. Der generierte Python Code sieht folgendermassen aus:
+The compiler is pleased, and the generated Python code looks like this:
 
     class Main:
     
@@ -63,24 +63,29 @@ Der Compile-Vorgang wird ohne Beanstandung durchgeführt. Der generierte Python 
     		int_ten = int(ten)
     
     Main.main()
-    
-Bei Benutzung des `untyped` Keywords ist zu beachten, dass der Compiler den nachfolgenden Teil nicht auf Fehler überprüft.
 
-Es wird nicht überprüft  
+Perfect! Just what we wanted. 
 
-* ob Funktionen oder Variablen deklariert sind
-* ob die Typen der Funktion oder der Variablen korrekt sind
+When using the `untyped` keyword, keep in mind that the compiler doesn't check the rest of the line for errors. 
 
-Andere Beispiele für `untyped` gibt es z.B. wenn Funktionen in eigenen extern Klassen nicht definiert sind, oder für Matrix Multiplikationen mit NumPy. Doch dazu in einem späteren Teil mehr.
+It will not be checked  
 
-Es gibt noch eine Steigerung zu `untyped`. Manchmal ist es gewünscht, den Code genauso wie er geschrieben wurde in den Python Sourcecode zu übertragen. Das einfachste Beispiel dafür ist bei Kommentaren.
+* if functions or variables are declared
+* if types of functions or variables are correct 
 
-**Nächster Teil: Syntax.pythonCode()**
+Other examples for `untyped` are when functions in your own Extern classes are not defined, or for matrix multiplications with NumPy. More about that in a later part.
 
-   
-<h3>Übersicht</h3>
+The compiler still checks if the code after `untyped` is valid Haxe code. Something like this won't go through, because array access with `:` and `,` is not possible in Haxe.
 
-* Intro
-* Basics
+    var is_value_empty = untyped data[:,4] == "";
+
+For something like that there is another keyword:
+
+**Next part: Syntax.pythonCode() (coming soon)**
+
+<h3>Overview</h3>
+
+* [Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
+* [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
 * **untyped**
-* Syntax.pythonCode()
+* Syntax.pythonCode (coming soon)
