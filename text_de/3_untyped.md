@@ -1,10 +1,14 @@
 #Haxe-Python Tutorial - untyped
 
+
+
 [Zurück zu Basics]()
 
 Das letzte Beispiel hat gezeigt wie eine Funktion, die in Python so nicht vorhanden ist, in den generierten Python Code mit eingebaut wird.
 
 In Python gibt es auch Funktionen um Variablen umzuwandeln. Um eine Variable zum Typ String zu konvertieren gibt es die Funktion `str()`, um eine Variable zum Typ Integer zu konvertieren gibt es die Funktion `int()`. Was ist also zu tun, um die nativen Funktionen direkt zu verwenden?
+
+<h3>3. Konvertieren von Variablentypen mit den Python Funktionen</h3>
 
 Eine Idee könnte sein, einfach die Python Funktionen in den Haxe Code zu schreiben. Ungefähr so:
 
@@ -22,7 +26,7 @@ Eine Idee könnte sein, einfach die Python Funktionen in den Haxe Code zu schrei
     	}
     }
 
-Wer das ausprobiert bekommt aber vom Haxe Compiler zwei Fehler gemeldet:
+Wer das ausprobiert bekommt vom Haxe Compiler zwei Fehler gemeldet:
 
     src/Main.hx:10: characters 18-21 : Unknown identifier : str  
     src/Main.hx:11: characters 16-19 : Unknown identifier : int
@@ -45,7 +49,7 @@ Wir wissen aber, dass es diese Funktionen im Python Code geben wird. Um den Comp
     	}
     }
 
-Der Compile-Vorgang wird ohne Beanstandung durchgeführt. Der generierte Python Code sieht so aus:
+Der Compile-Vorgang wird ohne Beanstandung durchgeführt. Der generierte Python Code sieht folgendermassen aus:
 
     class Main:
     
@@ -65,13 +69,16 @@ Es wird nicht überprüft
 * ob Funktionen oder Variablen deklariert sind
 * ob die Typen der Funktion oder der Variablen korrekt sind
 
+Andere Beispiele für `untyped` gibt es z.B. wenn Funktionen in eigenen extern Klassen nicht definiert sind, oder für Matrix Multiplikationen mit NumPy. Doch dazu in einem späteren Teil mehr.
 
+Es gibt noch eine Steigerung zu `untyped`. Manchmal ist es gewünscht, den Code genauso wie er geschrieben wurde in den Python Sourcecode zu übertragen. Das einfachste Beispiel dafür ist bei Kommentaren.
 
+**Nächster Teil: Syntax.pythonCode()**
 
    
-##Übersicht
+<h3>Übersicht</h3>
 
-* [Intro]()
-* [Basics]()
+* Intro
+* Basics
 * **untyped**
-* [python.Syntax.pythonCode]()
+* Syntax.pythonCode()
