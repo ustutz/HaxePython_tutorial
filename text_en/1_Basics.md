@@ -4,7 +4,7 @@
 
 ![haxe to python](https://i.imgsafe.org/63afc9b8fb.png)
 
-**[Previous part: Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)**
+[**Overview**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
 
 Let's begin with a very simple example to show the code the Haxe compiler generates.
 
@@ -116,11 +116,4 @@ Unfortunately this Python code becomes much more confusing and harder to read. B
 
 Those who know more about Python probably know there are functions in Python to convert variable types, too. How can we just use those?
 
-**[Next part: untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)**
-        
-<h3>Overview</h3>
-
-* [Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
-* **Basics**
-* [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
-* Syntax.pythonCode (coming soon)
+[**Next part: untyped**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)

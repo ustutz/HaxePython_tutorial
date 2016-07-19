@@ -1,5 +1,12 @@
 #Haxe-Python Tutorial - Intro
 
+<h3>Overview</h3>
+
+* **Intro**
+* [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
+* [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
+* Syntax.pythonCode (coming soon)
+
 <h3>This tutorial series is for programmers with previous knowledge in the Haxe programming language. It shows the use of the Python compile target.</h3>
 
 In one of my current projects I want to analyze a great amount of data. The programming language Python is predestined for this task because there are a lot of excellent libraries to make it easier. So the first thought would be to learn Python to do the data analysis. But it would take a lot of time to become really good at it.
@@ -41,12 +48,4 @@ The texts and sourcecode of these tutorials are also available on Github for err
 * [Repository](https://github.com/ustutz/HaxePython_tutorial) - to clone, for issues or pull requests
 * [Sourcecode](https://github.com/ustutz/HaxePython_tutorial/tree/master/code) - of the examples
 
-
-**[Next part: Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)**
-
-<h3>Overview</h3>
-
-* **Intro**
-* [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
-* [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
-* Syntax.pythonCode (coming soon)
+[**Next part: Basics**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)

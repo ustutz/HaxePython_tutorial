@@ -4,7 +4,9 @@
 
 ![haxe to python](https://i.imgsafe.org/63afc9b8fb.png)
 
-**[Previous part: Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)**
+[**Overview**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
+
+[**Previous part: Basics**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
 
 The last examples showed, how a function, that is not available as such, will be added to the generated Python sourcecode. 
 
@@ -82,10 +84,3 @@ The compiler still checks if the code after `untyped` is valid Haxe code. Someth
 For something like this there is another method.
 
 **Next part: Syntax.pythonCode() (coming soon)**
-
-<h3>Overview</h3>
-
-* [Intro](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
-* [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
-* **untyped**
-* Syntax.pythonCode (coming soon)
