@@ -5,7 +5,8 @@
 * **Intro**
 * [Basics](https://steemit.com/programming/@kkaos/haxe-python-tutorial-basics)
 * [untyped](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)
-* Syntax.pythonCode (coming soon)
+* [Syntax.pythonCode()](https://steemit.com/programming/@kkaos/haxe-python-tutorial-syntax-pythoncode)
+* Writing externs (coming soon)
 
 <h3>This tutorial series is for programmers with previous knowledge in the Haxe programming language. It shows the use of the Python compile target.</h3>
 
@@ -17,7 +18,7 @@ So I can write the data analysis in the familiar Haxe language. The compiler cre
 
 The Python compile target is relatively new. There is not a lot of documentation, and there are some features in Python that can't be transfered 1x1 to Haxe. In these tutorials I'd like to show what I learned.
 
-![haxe to python](https://i.imgsafe.org/63afc9b8fb.png)
+![haxe to python](https://i.imgsafe.org/e1a5de8b18.jpg)
 
 <h3>Requirements</h3>
 
