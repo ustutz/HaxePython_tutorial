@@ -2,7 +2,7 @@
 
 <h3>Writing Python sourcecode into the Haxe sourcecode.</h3>
 
-![haxe to python](https://i.imgsafe.org/63afc9b8fb.png)
+![haxe to python](https://i.imgsafe.org/e1a5de8b18.jpg)
 
 [**Overview**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-intro)
 

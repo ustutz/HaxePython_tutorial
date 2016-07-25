@@ -1,5 +1,12 @@
 #Haxe-Python Tutorial - Intro
 
+##Übersicht
+* **Intro**
+* [Basics]()
+* [untyped]()
+* [python.Syntax.pythonCode]()
+
+
 ####Dieses Tutorial ist für Programmierer mit Vorkenntnissen in der Haxe Programmiersprache gedacht. Es zeigt die Anwendung des Python Compile-Targets.
 
 Bei einem meiner aktuellen Projekte ist eine der Herausforderungen, eine große Menge an Daten auszuwerten. Die Programmiersprache Python ist dafür sehr gut geeignet weil es viele hervorragende Programm-Bibliotheken für Python gibt, die diese Aufgabe sehr erleichtern. Der logische nächste Schritt wäre also, Python zu lernen um damit die Datenauswertung zu programmieren. Natürlich  wär das aber sehr zeitaufwändig.
@@ -9,6 +16,8 @@ Da ich mit der Haxe Programmiersprache arbeite, gibt es noch eine andere Möglic
 Das bedeutet, ich kann die Datenauswertung wie gewohnt in Haxe programmieren. Der Compiler erzeugt daraus Python Source-Code, der dann ganz normal vom Python Interpreter ausgeführt wird. Auch eine Ansteuerung der Python Libraries ist möglich. 
 
 Das Python Compile Target ist jedoch noch relativ neu und in Python gibt es einige Besonderheiten, die sich nicht 1x1 auf Haxe übertragen lassen. Die Möglichkeiten, die ich entdeckt habe möchte ich in dieser Tutorial Serie zeigen.
+
+![haxe to python](https://i.imgsafe.org/e1a5de8b18.jpg)
 
 ##Voraussetzungen
 
@@ -39,8 +48,3 @@ Die ganzen Texte und der Sourcecode dieser Tutorials sind auch auf Github verfü
 * [Repository](https://github.com/ustutz/HaxePython_tutorial) - zum Clonen, für Issues oder Pull Requests
 * [Sourcecode](https://github.com/ustutz/HaxePython_tutorial/tree/master/code) - der Beispiele
 
-##Übersicht
-* **Intro**
-* [Basics]()
-* [untyped]()
-* [python.Syntax.pythonCode]()
