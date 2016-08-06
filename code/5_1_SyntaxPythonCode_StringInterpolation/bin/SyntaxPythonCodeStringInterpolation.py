@@ -42,7 +42,7 @@ class Main:
     def main():
         Main.a = 10
         Main.b = 5
-        print('The value of a is ' + Std.string(Main.a) + ' and the value of b is ' + str(Main.b))
+        python_Syntax._pythonCode((((("print( 'The value of a is " + Std.string(Main.a)) + " and the value of b is ") + Std.string(Main.b)) + "' )"),[])
 
 
 class Reflect:
