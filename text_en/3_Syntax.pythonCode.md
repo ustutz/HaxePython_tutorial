@@ -157,7 +157,8 @@ After I wrote this article I learned there is a way to use code interpolation in
     }
     
 
-The generated Python main class looks like this. 
+The generated Python main class looks like this. The complete code can be viewed here: [SyntaxPythonCodeStringInterpolation.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/5_1_SyntaxPythonCode_StringInterpolation/bin/SyntaxPythonCodeStringInterpolation.py)
+
 
 	...
     class Main:
