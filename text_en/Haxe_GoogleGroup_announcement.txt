@@ -1,0 +1,18 @@
+New Tutorial series how to use the Haxe-Python target
+
+Hi, I wrote the first 4 parts of a tutorial series on how to use the Haxe-Python target. 
+
+You can find it on
+https://steemit.com/@kkaos
+
+There doesn't seem to be much information on the Python target yet, and I wanted to try out the Steemit platform.
+
+Steemit is an experimental social media platform and uses a new cryptocurrency to reward users who upload articles, images, commentary, etc. So the posts that get upvoted receive a payout some days later, and the first people who vote receive a part of that payout.
+Upvoting doesn't cost anything. The payout is created from the new units of cryptocurrency that are mined daily.
+
+I'm still not sure if this works on the long run, but it looks like a great way to publish useful content.
+
+So if you like the tutorial articles I would be happy if you upvote or comment them.
+
+Cheers,
+Urs
