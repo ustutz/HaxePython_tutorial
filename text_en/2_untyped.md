@@ -68,6 +68,9 @@ The compiler is pleased, and the generated Python code looks like this:
 
 Perfect! Just what we wanted. 
 
+I used `str()` and `int()` just as random examples to show the use of `untyped()`. The standard Python functions are also available in the Haxe Standard Library in the sections [Builtins](http://api.haxe.org/python/lib/Builtins.html) and [UBuiltins](http://api.haxe.org/python/internal/UBuiltins.html)
+
+
 When using the `untyped` keyword, keep in mind that the compiler doesn't check the rest of the line for errors. 
 
 It will not be checked  
@@ -83,4 +86,6 @@ The compiler still checks if the code after `untyped` is valid Haxe code. Someth
 
 For something like this there is another method.
 
-**Next part: Syntax.pythonCode() (coming soon)**
+**Next part: [Syntax.pythonCode()](https://steemit.com/programming/@kkaos/haxe-python-tutorial-syntax-pythoncode)**
+
+
