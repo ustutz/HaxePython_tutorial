@@ -114,6 +114,12 @@ The functions `Std.string` and `Std.int` are not available in Python. But the Ha
 
 Unfortunately this Python code becomes much more confusing and harder to read. But don't let that discourage you. Most of the time you don't even have to look at the generated code and with a little bit of practice it becomes easier to distinguish your parts and the added stuff.
 
-Those who know more about Python probably know there are functions in Python to convert variable types, too. How can we just use those?
+The static typing of Haxe has a lot of advantages
+
+* errors are catched earlier
+* it's easier to understand the code
+* it can lead to better code generation and better performance
+
+So if you are a beginner it's best to learn about the type system first. However there are some cases when you want to bypass the types. I'll show you how to do that in the
 
 [**Next part: untyped**](https://steemit.com/programming/@kkaos/haxe-python-tutorial-untyped)

@@ -111,7 +111,7 @@ The Python interpreter again reports the error
 
 With some basic knowledge in Python however, it is not too hard to find such errors and correct them.
 
-<h4>Calling of Syntax.pythonCode() with variables</h4>
+<h4>Calling of Syntax.pythonCode() with variables (the wrong way)</h4>
 
 `Syntax.pythonCode()` cannot be called with a variable as an argument. The text to be included has to be written directly inside of the function and inside of quotes. Something like this doesn't work: 
 
@@ -138,6 +138,44 @@ The Python source code:
     Main.main()
     
 The compiler includes a class `python_Syntax._pythonCode`. It doesn't exist in Python and creates an error.
+
+<h4>Calling of Syntax.pythonCode() with variables (the right way)</h4>
+
+After I wrote this article I learned there is a way to use code interpolation in `Syntax.pythonCode()`.
+
+    class Main {
+    	
+    	static var a:Int;
+    	static var b:Int;
+    	
+    	static function main() {
+    		
+    		a = 10;
+    		b = 5;
+    		python.Syntax.pythonCode("print('The value of a is ' + {0} + ' and the value of b is ' + {1})", Std.string(a), String(b));
+    	}
+    }
+    
+
+The generated Python main class looks like this. 
+
+	...
+    class Main:
+	    _hx_class_name = "Main"
+	    __slots__ = ()
+	    _hx_statics = ["a", "b", "main"]
+	    a = None
+	    b = None
+	
+	    @staticmethod
+	    def main():
+	        Main.a = 10
+	        Main.b = 5
+	        python_Syntax._pythonCode((((("print( 'The value of a is " + Std.string(Main.a)) + " and the value of b is ") + Std.string(Main.b)) + "' )"),[])
+	
+	
+	
+
 
 Both `untyped` and `Syntax.pythonCode()` can be used to call external Python classes. But there is a more elegant way for that.
 
