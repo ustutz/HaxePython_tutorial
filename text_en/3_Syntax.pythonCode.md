@@ -157,7 +157,7 @@ After I wrote this article I learned there is a way to use code interpolation in
     }
     
 
-The generated Python main class looks like this. The complete code can be viewed here: [SyntaxPythonCodeStringInterpolation.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/5_1_SyntaxPythonCode_StringInterpolation/bin/SyntaxPythonCodeStringInterpolation.py)
+The generated Python main class looks like this:
 
 
 	...
@@ -176,7 +176,7 @@ The generated Python main class looks like this. The complete code can be viewed
 	
 	
 	
-
+The complete code can be viewed here: [SyntaxPythonCodeStringInterpolation.py](https://github.com/ustutz/HaxePython_tutorial/blob/master/code/5_1_SyntaxPythonCode_StringInterpolation/bin/SyntaxPythonCodeStringInterpolation.py)
 
 Both `untyped` and `Syntax.pythonCode()` can be used to call external Python classes. But there is a more elegant way for that.
 
